@@ -88,7 +88,7 @@ body {
   }
 
   .cardBox .card .back {
-    background: cornflowerblue;
+    background: #e9d28f;
   }
   @-webkit-keyframes giro {
     from {
