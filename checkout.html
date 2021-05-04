@@ -1,149 +1,157 @@
 <!DOCTYPE html>
 <!-- u19048263 Lucinda Botes -->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Lucinda Botes">
-    <title>Anastasia - Checkout</title>
-</head>
-<body>
-    <header>
-        <h1>
-            <a href="index.html">Anastasia</a>
-        </h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="cast.html">Cast</a>
-                </li>
-                <li>
-                    <a href="reception.html">Reception</a>
-                </li>
-                <li>
-                    <a href="history.html">History</a>
-                </li>
-                <li>
-                    <a href="gallery.html">Gallery</a>
-                </li>
-                <li>
-                    <a href="shop.html">Shop</a>
-                </li>
-                <li>
-                    <a href="cart.html">My Cart</a>
-                </li>
-                <li>
-                    <a href="checkout.html">Checkout</a>
-                </li>
-                <li>
-                    <a href="login.html">Log in</a>
-                </li>
-                <li>
-                    <a href="results.html">Receipt</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h2>Checkout</h2>
-        <p>Please input the following information to proceed with your purchase <br>
-        Note that fields marked with * are required</p>
-        <form action="results.html" method="post">
-            <fieldset>
-                <p>Contact details*
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Lucinda Botes">
+        <title>Anastasia - Checkout</title>
+    </head>
+    <body>
+        <header>
+            <h1>
+                <a href="index.html">Anastasia</a>
+            </h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="cast.html">Cast</a>
+                    </li>
+                    <li>
+                        <a href="reception.html">Reception</a>
+                    </li>
+                    <li>
+                        <a href="history.html">History</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="shop.html">Shop</a>
+                    </li>
+                    <li>
+                        <a href="cart.html">My Cart</a>
+                    </li>
+                    <li>
+                        <a href="checkout.html">Checkout</a>
+                    </li>
+                    <li>
+                        <a href="login.html">Log in</a>
+                    </li>
+                    <li>
+                        <a href="results.html">Receipt</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>Checkout</h2>
+            <p>Please input the following information to proceed with your purchase <br>
+            Note that fields marked with * are required</p>
+            <form action="results.html" method="post">
+                <fieldset>
+                    <p>Contact details*
+                        <br>
+                        <label>Name
+                            <input type="text" name="name" id="name" required>
+                        </label>
+                        <br>
+                        <label>Number
+                            <input type="tel" name="number" id="number" required>
+                        </label>
+                        <br>
+                        <label>Email Address
+                            <input type="email" name="email" id="email" required>
+                        </label>
+                    </p>
                     <br>
-                    <label>Name
-                        <input type="text" name="name" id="name" required>
+                    <label>Location*
+                        <input type="text" name="address" id="address" required>
                     </label>
                     <br>
-                    <label> Number
-                        <input type="tel" name="number" id="number" required>
+                    <label>Or Choose on Map
+                        <div id="googleMap" style="width:10%;height:50px;"></div>
                     </label>
-                </p>
-                <br>
-                <label>Location*
-                    <input type="text" name="address" id="address" required>
-                </label>
-                <br>
-                <label>Or Choose on Map
-                    <div id="googleMap" style="width:10%;height:50px;"></div>
-                </label>
-            </fieldset>
-            <fieldset>
-                <label>Promo Code 
-                    <input type="tel" name="promo" id="promo" maxlength="5" pattern="54321">
-                </label>
-            </fieldset>
-            <fieldset>
-                <p>Payment method*</p>
-                <label>
-                    <input type="radio" name="payment" id="visa">
-                    Card
-                </label>
-                <label>
-                    <input type="radio" name="payment" id="EFT">
-                    EFT
-                </label>
-                <label>
-                    <input type="radio" name="payment" id="paypal">
-                    Paypal
-                </label>
-            </fieldset>
-            <fieldset>
-                <p>Card</p>
-                <label>Card Name
-                    <input type="text" name="card_name" id="card_name">
-                </label>
-                <br>
-                <label>Card Number
-                    <input type="tel" name="card_number" id="card_number">
-                </label>
-                <br>
-                <label>Card Expiry Date
-                    <input type="date" name="card_date" id="card_date">
-                </label>
-                <br>
-                <label>CVV
-                    <input type="tel" name="cvv" id="cvv" maxlength="3">
-                </label>
-            </fieldset>
-            <fieldset>
-                <p>
-                    EFT <br>
-                    Account Details: <br>
-                    Account Number: 01234567891011 <br>
-                    Bank: ABCDEF <br>
-                    Branch Code: 012345 <br>
-                </p>
-                <label> Proof of payment
-                    <input type="file" name="proof" id="proof">
-                </label>
-            </fieldset>
-            <fieldset>
-                <p>Paypal</p>
-                <input type="button" value="To Paypal">
-            </fieldset>
-            <fieldset>
-                <h4>Totals</h4>
-                <p>
-                    Subtotal: <del>R400.00</del> R0.00 <br>
-                    Delivery Fee: R0 <br>
-                    Total: R0
-                </p>
-            </fieldset>
-            <fieldset>
-                <!-- Due to only being allowed to have html, I cannot possibly have the post method work. If there is a way to succesfully post with only html, please teach us.-->
-                <input type="submit" value="Purchase">
-                <input type="reset" value="Reset">
-            </fieldset>
-        </form>
-    </main>
-    <footer>
-        <p>&copy; Lucinda Botes u19048263</p>
-    </footer>
-</body>
+                </fieldset>
+                <fieldset>
+                    <label>Promo Code 
+                        <input type="tel" name="promo" id="promo" maxlength="5" pattern="54321">
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <p>Payment method*</p>
+                    <label>
+                        <input type="radio" name="payment" id="visa">
+                        Card
+                    </label>
+                    <label>
+                        <input type="radio" name="payment" id="EFT">
+                        EFT
+                    </label>
+                    <label>
+                        <input type="radio" name="payment" id="paypal">
+                        Paypal
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <p>Card</p>
+                    <label>Card Name
+                        <input type="text" name="card_name" id="card_name">
+                    </label>
+                    <br>
+                    <label>Card Number
+                        <input type="tel" name="card_number" id="card_number">
+                    </label>
+                    <br>
+                    <label>Card Expiry Date
+                        <input type="date" name="card_date" id="card_date">
+                    </label>
+                    <br>
+                    <label>CVV
+                        <input type="tel" name="cvv" id="cvv" maxlength="3">
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <p>
+                        EFT <br>
+                        Account Details: <br>
+                        Account Number: 01234567891011 <br>
+                        Bank: ABCDEF <br>
+                        Branch Code: 012345 <br>
+                    </p>
+                    <label> Proof of payment
+                        <input type="file" name="proof" id="proof">
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <p>Paypal</p>
+                    <input type="button" value="To Paypal">
+                </fieldset>
+                <fieldset>
+                    <h4>Totals</h4>
+                    <p>
+                        Subtotal: <del>R400.00</del> R0.00 <br>
+                        Delivery Fee: R0 <br>
+                        Total: R0
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <!-- Due to only being allowed to have html, I cannot possibly have the post method work. If there is a way to succesfully post with only html, please teach us.-->
+                    <input type="submit" value="Purchase">
+                    <input type="reset" value="Reset">
+                </fieldset>
+            </form>
+        </main>
+        <footer>
+            <p>&copy; Lucinda Botes u19048263</p>
+        </footer>
+    </body>
 </html>
+
+
+
+
