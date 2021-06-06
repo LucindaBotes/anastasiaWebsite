@@ -6,12 +6,12 @@
 /* ====================================== */
 @font-face {
     font-family: 'EmbossNormal';
-    src: url(fonts/EMBOSSN.TTF);
+    src: url(../fonts/EMBOSSN.TTF);
 }
 
 @font-face {
     font-family: 'Valentine';
-    src: url(fonts/Valentine.ttf);
+    src: url(../fonts/Valentine.ttf);
 }
 
 /* ====================================== */
@@ -57,23 +57,96 @@ a {
 
 /* Styling for desktop sized devices */
 /* ====================================== */
-@media (min-width: 700px) and (max-width: 2000px) {
+@media (min-width: 1100px) and (max-width: 2000px) {
     body{
         height: 100vh;
         margin: 0;
     }
 
+    #navigation {
+        width:100%;
+    }
     header {
         margin-top: 0;
+        display: flex;
+        height: 6%;
+        align-items: center;
     }
+
+    #menuToggle input{
+        display: none;
+        width: 1px;
+        height: 1px;
+        position: absolute;
+        opacity: 0;
+        z-index: 2;
+        margin: 0;
+    }
+
+    #menuToggle {
+        display: flex;
+    }
+
+    #menuToggle h1 {
+        font-size: 3em;
+        margin: 0.2em 0 0 1em;
+        font-family: 'EmbossNormal';
+    }
+
+    #menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #menuToggle ul div{
+        display: flex;
+        list-style: none;
+        background-color: var(--tertiaryColour);
+    }
+    #navLinkContainer li {
+        padding: 16px;
+        box-shadow: 0px 1px 5px 0px var(--primaryColour);
+    }
+
+    #functions li {
+        padding: 16px;
+        box-shadow: 0px 1px 5px 0px var(--primaryColour);
+    }
+
+    main {
+        margin-top: 0;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+    
+    .content {
+        display: grid;
+        grid-template-columns: 1fr  1fr;
+        grid-template-rows: 1fr 30%;
+    }
+
+    #text-content {
+        display: grid;
+        place-content: center;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    #cover-content{
+        grid-column: 2 / 3;
+    }
+
 }
+
 
 /* ====================================== */
 /* ====================================== */
 
 /* Styling for Tablet sized devices */
 /* ====================================== */
-@media (min-width: 400px) and (max-width: 700px) {
+@media (min-width: 400px) and (max-width: 1100px) {
     body {
         height: 100vh;
         background-color: white;
@@ -105,7 +178,7 @@ a {
         z-index: 1;
     }
 
-    #menuToggle li {
+    #menuToggle ul li {
         border: unset;
         font-size: 1.3em;
         height: 20px;
@@ -140,16 +213,24 @@ a {
 
     #menu {
         position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         width: 50%;
-        margin: -125px 0 0 -40px;
-        padding-top: 100px;
+        height: 100vh;
+        margin: -135px 0 0 -40px;
+        padding-top: 90px;
         background: var(--tertiaryColour);
         list-style-type: none;
         transform-origin: 0% 0%;
         transform: translate(-100%, 0); 
         transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     }
-    
+
+    #functions {
+        margin-bottom: 90px;
+    }
+
     #menuToggle input:checked ~ ul {
         transform: none;
     }
@@ -234,7 +315,11 @@ a {
 
     #menu {
         position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         width: 100%;
+        height: 100vh;
         margin: -125px 0 0 -40px;
         padding-top: 60px;
         background: var(--tertiaryColour);
@@ -242,6 +327,10 @@ a {
         transform-origin: 0% 0%;
         transform: translate(-100%, 0); 
         transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    #functions {
+        margin-bottom: 70px;
     }
 
     #menuToggle {
