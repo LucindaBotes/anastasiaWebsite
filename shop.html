@@ -1,124 +1,153 @@
 <!DOCTYPE html>
 <!-- u19048263 Lucinda Botes -->
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Lucinda Botes">
-    <link rel="stylesheet" href="css/navigation.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Lucinda Botes" />
+    <link rel="icon" href="media/favicon/golden-eiffel-tower.png" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Anastasia - Shop</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header id="Top">
-        <nav id="navigation">
-            <div id="menuToggle">
-                <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-                <h1>Anastasia</h1>
-                <ul id="menu">
-                    <div id="navLinkContainer">
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="cast.html">Cast</a>
-                        </li>
-                        <li>
-                            <a href="reception.html">Reception</a>
-                        </li>
-                        <li>
-                            <a href="history.html">History</a>
-                        </li>
-                        <li>
-                            <a href="gallery.html">Gallery</a>
-                        </li>
-                        <li>
-                            <a href="shop.html">Shop</a>
-                        </li>
-                    </div>
-                    <div id="functions">
-                        <li>
-                            <a href="cart.html">My Cart</a>
-                        </li>
-                        <li>
-                            <a href="login.html">Log in</a>
-                        </li>
-                    </div>
-                </ul>
-        </nav>
+      <nav id="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <h1>
+            <a href="index.html">Anastasia</a>
+          </h1>
+          <div id="menu">
+            <ul id="navLinkContainer">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="cast.html">Cast</a>
+              </li>
+              <li>
+                <a href="reception.html">Reception</a>
+              </li>
+              <li>
+                <a href="history.html">History</a>
+              </li>
+              <li>
+                <a href="gallery.html">Gallery</a>
+              </li>
+              <li class="active">
+                <a href="shop.html">Shop</a>
+              </li>
+            </ul>
+            <ul id="functions">
+              <li>
+                <a href="login.html">Checkout</a>
+                <!-- Seeing as I cannot store user input I am trying 
+                                to simulate needing to log in to access the checkout page -->
+              </li>
+              <li>
+                <a href="login.html">Log in</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
-        <form action="cart.html" method="post">
-            <div id="promo_add">
-                <p><b>Promotion: <br> Get your first item for FREE! <br> Use the Promo Code - 54321</b></p>
+      <div class="content">
+        <form id="shopForm" action="login.html" method="post">
+          <div id="promo_add">
+            <p>
+              Promotion: <br />
+              Get your first item for <strong>FREE!</strong> Use the Promo Code
+              -
+              <strong>54321</strong>
+            </p>
+          </div>
+          <div id="item">
+            <div class="item">
+              <label>
+                <img
+                  class="merch"
+                  src="https://merchbar.imgix.net/product/5/3603/94273/fMVsAvAjhomelovefamily_dolman_front.png?w=160&h=160&quality=60&auto=compress%252Cformat"
+                  alt="Anastasia T-Shirt"
+                />
+                <span>Price: R130.00</span>
+                <input type="checkbox" name="add" />
+                <span class="check"> + Add to cart</span>
+              </label>
             </div>
             <div class="item">
-                <figure>
-                    <label>
-                        <img src="https://merchbar.imgix.net/product/5/3603/94273/fMVsAvAjhomelovefamily_dolman_front.png?w=160&h=160&quality=60&auto=compress%252Cformat"
-                            style="width: 20%;" alt="Anastasia T-Shirt">
-                        <figcaption>Anastasia T-Shirt</figcaption>
-                        <p>Price: R130.00</p>
-                        <input type="checkbox" name="add"> Add to cart
-                    </label>
-                </figure>
+              <label>
+                <img
+                  class="merch"
+                  src="https://merchbar.imgix.net/product/5/3603/94289/ans_ja-al_keychain_04.png?w=160&h=160&quality=60&auto=compress%252Cformat"
+                  alt="Anastasia Keychain"
+                />
+                <span>Price: R50.00</span>
+                <input type="checkbox" name="add" />
+                <span class="check"> + Add to cart</span>
+              </label>
             </div>
             <div class="item">
-                <figure>
-                    <label>
-                        <img src="https://merchbar.imgix.net/product/5/3603/94289/ans_ja-al_keychain_04.png?w=160&h=160&quality=60&auto=compress%252Cformat"
-                            style="width: 20%;" alt="Anastasia Keychain">
-                        <figcaption>Anastasia Keychain</figcaption>
-                        <p>Price: R50.00</p>
-                        <input type="checkbox" name="add"> Add to cart
-                    </label>
-                </figure>
+              <label>
+                <img
+                  class="merch"
+                  src="https://ih1.redbubble.net/image.921451426.5673/st,small,507x507-pad,600x600,f8f8f8.jpg"
+                  alt="Anastasia Stickers"
+                />
+                <span>Price: R20.00</span>
+                <input type="checkbox" name="add" />
+                <span class="check"> + Add to cart</span>
+              </label>
             </div>
             <div class="item">
-                <figure>
-                    <label>
-                        <img src="https://ih1.redbubble.net/image.921451426.5673/st,small,507x507-pad,600x600,f8f8f8.jpg"
-                            style="width: 20%;" alt="Anastasia Stickers">
-                        <figcaption>Anastasia Stickers</figcaption>
-                        <p>Price: R20.00</p>
-                        <input type="checkbox" name="add"> Add to cart
-                    </label>
-                </figure>
+              <label>
+                <img
+                  class="merch"
+                  src="https://ih1.redbubble.net/image.126042002.0352/ra,sweatshirt,x1800,101010:01c5ca27c6,front-c,281,327,600,600-bg,f8f8f8.u2.jpg"
+                  alt="Anastasia Hoody"
+                />
+                <span>Price: R180.00</span>
+                <input type="checkbox" name="add" />
+                <span class="check"> + Add to cart</span>
+              </label>
             </div>
             <div class="item">
-                <figure>
-                    <label>
-                        <img src="https://ih1.redbubble.net/image.126042002.0352/ra,sweatshirt,x1800,101010:01c5ca27c6,front-c,281,327,600,600-bg,f8f8f8.u2.jpg"
-                            style="width: 20%;" alt="Anastasia Hoody">
-                        <figcaption>Anastasia Hoody</figcaption>
-                        <p>Price: R180.00</p>
-                        <input type="checkbox" name="add"> Add to cart
-                    </label>
-                </figure>
+              <label>
+                <img
+                  class="merch"
+                  src="https://i.etsystatic.com/16104183/r/il/87dd70/2386122041/il_570xN.2386122041_tn90.jpg"
+                  alt="Anastasia Mug"
+                />
+                <span>Price: R50.00</span>
+                <input type="checkbox" name="add" />
+                <span class="check"> + Add to cart</span>
+              </label>
             </div>
             <div class="item">
-                <figure>
-                    <label>
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/61oYlVpwirL.jpg" style="width: 20%;"
-                            alt="Anastasia Trinket Box">
-                        <figcaption>Anastasia Trinket Box</figcaption>
-                        <p>Price: R400.00</p>
-                        <input type="checkbox" name="add"> Add to cart
-                    </label>
-                </figure>
+              <label>
+                <img
+                  class="merch"
+                  src="https://images-na.ssl-images-amazon.com/images/I/61oYlVpwirL.jpg"
+                  alt="Anastasia Trinket Box"
+                />
+                <span>Price: R400.00</span>
+                <input type="checkbox" name="add" />
+                <span class="check"> + Add to cart</span>
+              </label>
             </div>
-            <input type="submit" value="Go To Checkout">
+          </div>
         </form>
-        <a href="#Top">Back to Top</a>
+      </div>
     </main>
     <footer>
-        <p>&copy; Lucinda Botes u19048263</p>
+      <p>&copy; Lucinda Botes u19048263</p>
     </footer>
-</body>
-
+    <script src="index.js"></script>
+  </body>
 </html>

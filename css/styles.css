@@ -1,0 +1,1386 @@
+/* =================================================================================================================== */
+
+/* Lucinda Botes u19048263 */
+
+/* =================================================================================================================== */
+/* =================================================================================================================== */
+/* 
+
+    !Appologies for anyone marking this code!
+
+*/
+/* =================================================================================================================== */
+/* Global styles */
+/* =================================================================================================================== */
+
+/* ====================================== */
+/* Font specifications */
+/* ====================================== */
+@font-face {
+  font-family: "EmbossNormal";
+  src: url(fonts/EMBOSSN.TTF);
+}
+
+@font-face {
+  font-family: "Valentine";
+  src: url(fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Times";
+  src: url(fonts/times\ new\ roman.ttf);
+}
+
+/* ====================================== */
+
+/* ====================================== */
+/* Variable declarations */
+/* ====================================== */
+:root {
+  /* Colour variables*/
+  --primaryColour: #ccb063;
+  --secondaryColour: #24365f;
+  --tertiaryColour: #c8c39d;
+  --accentColour1: #ccc9b2a6;
+  --accentColour2: #37477a;
+}
+
+/* ====================================== */
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--tertiaryColour);
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: visible;
+  bottom: 0;
+  font-family: "Valentine";
+  font-size: 1.2em;
+}
+
+/* ================================================ */
+/* Styling for grouping elements */
+/* ================================================ */
+
+header {
+  background-color: var(--primaryColour);
+  position: fixed;
+  width: 100vw;
+  z-index: 1;
+  flex: 1;
+  margin-top: 0;
+  display: flex;
+  height: 60px;
+  align-items: center;
+}
+
+main {
+  margin-top: 0;
+  flex: 5;
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: auto;
+  bottom: 0;
+  background-color: var(--primaryColour);
+}
+
+/* ================================================ */
+
+/* ================================================ */
+/* Styling for heading elements */
+/* ================================================ */
+h2 {
+  font-size: 3em;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.7em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+/* ================================================ */
+
+/* Styling for all the main content containers */
+.content {
+  width: 75%;
+  padding: 3%;
+  padding-top: 5%;
+  background-color: white;
+}
+
+/* Styling for all anchor tags containing text */
+a {
+  text-decoration: none;
+  color: var(--secondaryColour);
+}
+
+/* Styling for all list item tags containing text */
+li {
+  padding: 16px;
+}
+
+/* Styling for the figure on the index page */
+figure {
+  margin: 0;
+}
+
+/* Styling for the audio element on the gallery page */
+audio::-webkit-media-controls-panel {
+  background-color: var(--accentColour1);
+}
+
+/* Styling for the video element on the log in page */
+video {
+  object-fit: cover;
+  aspect-ratio: 8 / 5;
+}
+
+/* Styling for all iframe elements */
+iframe {
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 16/9;
+  position: static;
+  bottom: 0;
+  border: 0;
+}
+
+/* error message shown when input is invalid */
+.errorMessage {
+  font-size: 0.7em;
+  color: red;
+}
+
+/* Styling for all buttons */
+.button {
+  margin: 0.5%;
+  background-color: var(--tertiaryColour);
+  padding: 1%;
+  border-radius: 10px;
+  border-color: #f4f4f4;
+  font-size: 1em;
+  font-family: "Valentine";
+  font-size: 1.1em;
+}
+
+.button:hover {
+  background-color: var(--accentColour1);
+}
+
+/* =================================================================================================================== */
+
+/* ================================================================================ */
+/* Styling Navigation */
+/* ================================================================================ */
+
+/* Main navigation */
+#navigation {
+  width: 100%;
+}
+
+/* =================================================================== */
+/* Toggle for showing and hiding navigation on smaller screen sizes    */
+/* =================================================================== */
+#menuToggle input {
+  display: none;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  opacity: 0;
+  z-index: 2;
+  margin: 0;
+}
+
+#menuToggle {
+  display: flex;
+}
+
+#menuToggle h1 {
+  font-size: 3em;
+  margin: 0.2em 0.1em 0.1em 0.1em;
+  font-family: "EmbossNormal";
+}
+
+#menu {
+  display: flex;
+  width: 100%;
+  height: 52%;
+  justify-content: space-between;
+}
+/* =================================================================== */
+/* =================================================================== */
+
+/* =================================================================== */
+/* Adding Hover effects to navigation */
+/* =================================================================== */
+li:hover:not(.active) {
+  background-color: var(--secondaryColour);
+}
+li:hover:not(.active) a {
+  color: var(--primaryColour);
+}
+
+.active {
+  background-color: var(--secondaryColour);
+}
+
+.active a {
+  color: var(--primaryColour);
+}
+/* =================================================================== */
+/* =================================================================== */
+
+/* =================================================================== */
+/* Splitting the navigation */
+/* =================================================================== */
+#menu ul {
+  padding-left: 0;
+  display: flex;
+  overflow: hidden;
+  list-style: none;
+  background-color: var(--tertiaryColour);
+}
+#navLinkContainer {
+  height: 100%;
+}
+
+#navLinkContainer li {
+  padding: 17px;
+  height: 100%;
+  box-shadow: 0px 1px 5px 0px var(--primaryColour);
+}
+
+#functions {
+  height: 100%;
+  padding-right: 20px;
+}
+
+#functions li {
+  padding: 16px;
+  width: 100%;
+  box-shadow: 0px 1px 5px 0px var(--primaryColour);
+}
+/* =================================================================== */
+/* =================================================================== */
+
+/* =================================================================== */
+/* Styling In-Page navigation */
+/* =================================================================== */
+.in_page_nav {
+  position: fixed;
+  left: 0;
+  top: 36px;
+  width: 9.5%;
+}
+#ordered_list {
+  list-style: none;
+  padding-left: 0;
+}
+#ordered_list li {
+  background-color: var(--primaryColour);
+}
+
+#ordered_list li a {
+  color: var(--secondaryColour);
+}
+
+#sub_nav {
+  list-style: none;
+  padding-left: 0;
+}
+
+#ordered_list .li:hover,
+#sub_nav li:hover {
+  background-color: var(--secondaryColour);
+}
+
+#ordered_list .li:hover .list_item,
+#sub_nav li:hover a {
+  color: var(--primaryColour);
+}
+
+/* =================================================================================================================== */
+/* 
+
+
+*/
+/* =================================================================================================================== */
+/* Styling individual Pages */
+/* =================================================================================================================== */
+/* 
+
+
+*/
+/* ==================================================================================================== */
+/* Index Page Styling */
+/* ==================================================================================================== */
+
+.indexContent {
+  display: grid;
+  display: -ms-grid;
+  padding-top: 7%;
+  -ms-grid-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+}
+
+#cover {
+  height: 150%;
+  width: 150%;
+}
+
+#cover-content {
+  grid-column: 2 /3;
+  grid-row: 1 / 3;
+  overflow: hidden;
+}
+#cover-content img {
+  width: 50%;
+}
+#text-content {
+  line-height: 2em;
+  letter-spacing: 0.1em;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+#trailer-content {
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+}
+
+#trailer-container {
+  display: flex;
+  width: calc(100vw - 30%);
+}
+
+/* ==================================================================================================== */
+
+/* ==================================================================================================== */
+/* Cast page Styling */
+/* ==================================================================================================== */
+
+#actors {
+  display: grid;
+  display: -ms-grid;
+  -ms-grid-columns: repeat(2, 50%);
+}
+
+.card {
+  border-radius: 4px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 2em;
+  letter-spacing: 2px;
+  padding: 16px;
+}
+
+.description p {
+  width: 100%;
+}
+
+/* ==================================================================================================== */
+
+/* ==================================================================================================== */
+/* Reception page Styling */
+/* ==================================================================================================== */
+#reception {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+table {
+  width: 75%;
+  margin-bottom: 2%;
+}
+td {
+  padding: 10px;
+  border: var(--accentColour1) 1px solid;
+  font-weight: bold;
+  font-size: 1.2em;
+  box-shadow: 0px 1px 5px 0px var(--accentColour1);
+}
+
+#reviews {
+  display: flex;
+  line-height: 2em;
+  letter-spacing: 2px;
+  flex-direction: column;
+  align-items: center;
+}
+
+#critics {
+  display: grid;
+  display: -ms-grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+}
+
+.reviews {
+  border: solid 1px var(--secondaryColour);
+  padding: 5%;
+  margin: 1%;
+  border-radius: 10px;
+  box-shadow: 0px 1px 5px 0px var(--secondaryColour);
+}
+
+strong i {
+  color: var(--primaryColour);
+  padding-top: 16px;
+}
+
+#news {
+  margin: 3%;
+}
+
+#news p {
+  letter-spacing: 2px;
+  padding-left: 5%;
+  font-size: 1.2em;
+  font-weight: 500;
+  line-height: 2em;
+}
+
+/* ==================================================================================================== */
+
+/* ==================================================================================================== */
+/* History page Styling (Yes the newspapers are made with css!)*/
+/* ==================================================================================================== */
+
+/* ============================================================== */
+/* Create the newspapers */
+/* ============================================================== */
+.newspaperArticle {
+  background-image: url("../media/images/newspaperBackground.jpg");
+  background-size: cover;
+  background-color: #c4c6ca;
+  padding: 2%;
+  margin: 2%;
+  width: 90%;
+  box-shadow: 0px 1px 6px 0px rgb(160, 160, 160);
+  font-family: "Times";
+  column-count: 4;
+}
+
+.newspaperArticle img {
+  width: 100%;
+}
+
+.newspaperArticle h3 {
+  font-size: 1em;
+}
+
+.historyText {
+  margin-left: 1%;
+}
+/* ============================================================== */
+/* Make them scrapbook style */
+/* ============================================================== */
+#rasputin {
+  transform: rotate(-1deg);
+}
+
+#anastasia {
+  transform: rotate(-3deg);
+}
+
+#anna_anderson {
+  transform: rotate(1deg);
+}
+
+#articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ==================================================================================================== */
+
+/* ==================================================================================================== */
+/* Gallery page Styling */
+/* ==================================================================================================== */
+
+#colage {
+  display: grid;
+  display: -ms-grid;
+  -ms-grid-rows: repeat(7, 1fr);
+  -ms-grid-columns: repeat(4, 1fr);
+}
+
+#img2 {
+  width: 100%;
+  height: 100%;
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+#img1 {
+  width: 100%;
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+}
+
+#img4 {
+  width: 100%;
+  height: 100%;
+  grid-column: 3 / 5;
+  grid-row: 1 / 3;
+}
+#img5 {
+  width: 100%;
+  grid-column: 1 / 5;
+  grid-row: 4 / 6;
+}
+
+#img7 {
+  width: 100%;
+  grid-column: 1 / 5;
+  grid-row: 6 / 8;
+}
+#img8 {
+  width: 100%;
+  grid-column: 3 / 5;
+  grid-row: 3 / 4;
+}
+
+#soundtrack {
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+#albumImg {
+  width: 200px;
+}
+
+.galleryContent {
+  padding-top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ==================================================================================================== */
+
+/* ==================================================================================================== */
+/* Shop Page Styling */
+/* ==================================================================================================== */
+#promo_add {
+  display: flex;
+  padding-top: 1%;
+  justify-content: center;
+  margin-top: 2%;
+  margin-right: 19%;
+  position: fixed;
+  font-size: 1.1em;
+  top: 0;
+  left: 9.5%;
+  width: 81.5%;
+  background-color: var(--accentColour1);
+}
+#item {
+  columns: 3;
+  margin-top: 5%;
+}
+
+.item {
+  padding: 10%;
+}
+
+.item label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.merch {
+  width: 50%;
+  padding-bottom: 5%;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"]:checked ~ .check {
+  background-color: var(--accentColour1);
+}
+
+.check {
+  border-radius: 100px;
+  width: fit-content;
+  width: -moz-fit-content;
+  height: 30px;
+  margin-top: 5%;
+  padding: 3%;
+  background-color: var(--tertiaryColour);
+}
+
+/* ==================================================================================================== */
+
+/* ==================================================================================================== */
+/* Log In Page Styling */
+/* ==================================================================================================== */
+
+#logInPage {
+  display: flex;
+  width: 100%;
+}
+
+#logInForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+#logInMain {
+  margin: 0;
+  width: 100%;
+}
+
+#menuToggleLogIn {
+  display: flex;
+  font-family: "EmbossNormal";
+  font-size: 2em;
+  justify-content: center;
+}
+
+.logInLabel {
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  font-size: larger;
+  font-weight: 700;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+
+input[name="username"] {
+  padding: 2%;
+  border: var(--secondaryColour) 1px solid;
+  border-radius: 10px;
+}
+
+input[name="password"] {
+  padding: 2%;
+  border: var(--secondaryColour) 1px solid;
+  border-radius: 10px;
+}
+
+/* ==================================================================================================== */
+
+/* ==================================================================================================== */
+/* Checkput Page Styling */
+/* ==================================================================================================== */
+#checkoutPageMain {
+  width: 100%;
+}
+#checkoutForm {
+  width: 100%;
+  padding: 2%;
+}
+
+fieldset {
+  width: 90%;
+  padding: 2%;
+  font-weight: 700;
+  background-color: rgb(250, 250, 250);
+  border: #ccc 1px solid;
+  border-radius: 10px;
+  margin-bottom: 1%;
+}
+
+.inline {
+  padding-right: 2%;
+  display: flex;
+}
+
+.inline .checkoutLabels {
+  width: 80%;
+}
+
+.textInput {
+  width: 97%;
+  font-family: "Valentine";
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid var(--tertiaryColour);
+  border-radius: 3px;
+}
+
+input[type="date"] {
+  height: 24%;
+  cursor: pointer;
+  background-color: white;
+}
+
+#promo {
+  width: 30%;
+  font-family: "Valentine";
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid var(--tertiaryColour);
+  border-radius: 3px;
+}
+
+.checkoutLabels > #promo {
+  display: flex;
+  flex-direction: column;
+}
+
+#locationOnMap label {
+  display: flex;
+  flex-direction: column;
+}
+
+#map {
+  width: 100%;
+  height: 150px;
+  border: 1px solid var(--tertiaryColour);
+}
+
+/* ============================================================== */
+/* Customise radio buttons to look like buttons */
+/* ============================================================== */
+label > input[type="radio"] {
+  display: none;
+}
+
+label > input[type="radio"]:checked ~ span {
+  background-color: var(--secondaryColour);
+  color: var(--primaryColour);
+}
+
+.radioInput > span {
+  padding: 1%;
+  margin-right: 0.3rem;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 0.1rem;
+  color: black;
+  cursor: pointer;
+  border-color: var(--primaryColour);
+}
+/* ============================================================== */
+
+.priceText {
+  display: flex;
+  justify-content: space-between;
+}
+
+#purchase {
+  padding: 10%;
+}
+
+input[type="reset"] {
+  background-color: rgb(236, 123, 123);
+  color: black;
+  height: 2%;
+  padding: 1%;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: 700;
+  font-family: "Valentine";
+}
+
+input[type="reset"]:hover {
+  background-color: red;
+}
+/* ============================================================== */
+/* These classes are to show and hide payment method forms based  */
+/* on radio button selections                                     */
+/* ============================================================== */
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+/* ============================================================== */
+
+/* ==================================================================================================== */
+
+/* ==================================================================================================== */
+/* Receipt Page Styling*/
+/* ==================================================================================================== */
+
+#receipt {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#success {
+  margin-top: 60px;
+}
+.phases {
+  display: flex;
+}
+
+.phases p {
+  margin-top: 0;
+  padding-left: 2%;
+}
+
+.progress {
+  width: 20px;
+  height: 20px;
+  display: inline;
+  border-radius: 50%;
+  padding: 0.1%;
+  background-color: var(--secondaryColour);
+}
+
+.progress p {
+  color: var(--primaryColour);
+  display: flex;
+  justify-content: center;
+}
+
+#tracking {
+  margin-bottom: 5%;
+}
+
+#loading {
+  padding-left: 2%;
+}
+
+#return {
+  padding-bottom: 11%;
+}
+
+/* ========================================================== */
+/* Animation to show that the next phase is in progress*/
+/* ========================================================== */
+
+#loading span {
+  content: "";
+  width: 15px;
+  height: 15px;
+  margin: 0 2px;
+  background-color: var(--accentColour1);
+  border-radius: 50%;
+  display: inline-block;
+  animation-name: dots;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#loading span:nth-child(2) {
+  background-color: var(--tertiaryColour);
+  animation-delay: 0.4s;
+}
+
+#loading span:nth-child(3) {
+  background-color: var(--primaryColour);
+  animation-delay: 0.8s;
+}
+
+@keyframes dots {
+  50% {
+    opacity: 0;
+    transform: scale(0.7) translateY(10px);
+  }
+}
+
+/* =================================================================================================================== */
+
+/* =================================================================================================================== */
+/* Styling Scroll-bar */
+/* =================================================================================================================== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--tertiaryColour);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--secondaryColour);
+}
+
+/* =================================================================================================================== */
+/* =================================================================================================================== */
+
+/* =================================================================================================================== */
+/* =================================================================================================================== */
+/* Media Queries */
+/* =================================================================================================================== */
+
+/* ========================================================== */
+/* Screens smaller than 1400px */
+/* ========================================================== */
+
+@media screen and (max-width: 1400px) {
+  /* =============================================== */
+  /* Index Page */
+  /* =============================================== */
+
+  /* Change order of Index page elements */
+  .indexContent {
+    display: flex;
+    flex-direction: column;
+  }
+  .indexContent :nth-child(1) {
+    order: 2;
+  }
+  .indexContent :nth-child(2) {
+    order: 1;
+  }
+  .indexContent :nth-child(3) {
+    order: 3;
+  }
+
+  /* Changing the position of the cover image and text*/
+  #cover-content {
+    width: 18%;
+    top: 70%;
+    left: 20%;
+    position: absolute;
+  }
+
+  #cover {
+    bottom: 0;
+  }
+
+  #details {
+    margin: 10% 0 10% 40%;
+  }
+
+  /* Resizing the trailer container div */
+  #trailer-content {
+    display: flex;
+  }
+  #trailer-content :nth-child(1) {
+    order: 1;
+  }
+  #trailer-content :nth-child(2) {
+    order: 2;
+  }
+
+  /* =============================================== */
+
+  /* =============================================== */
+  /* Cast Page */
+  /* =============================================== */
+
+  /* Change actors on the cast page to display in a column */
+  #actors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* =============================================== */
+
+  /* =============================================== */
+  /* Log in Page */
+  /* =============================================== */
+
+  /* Change size of video on log In page */
+  video {
+    width: 80%;
+  }
+
+  /* =============================================== */
+
+  /* =============================================== */
+  /* Checkout Page */
+  /* =============================================== */
+
+  /* Changing the display of the form on the checkout page */
+  .inline {
+    flex-direction: column;
+  }
+  .inline .checkoutLabels {
+    width: 100%;
+  }
+
+  .textInput {
+    width: 95%;
+  }
+
+  #checkoutPageMain {
+    padding-top: 60px;
+  }
+  /* =============================================== */
+}
+/* ====================================================================== */
+
+/* ====================================================================== */
+/* Screens smaller than 1100px */
+/* ====================================================================== */
+
+@media screen and (max-width: 1100px) {
+  /* =============================================== */
+  /* Navigation */
+  /* =============================================== */
+
+  /*changing the navigation such that you must click */
+  /*the burger menu button to display the navigation */
+  #menuToggle {
+    display: block;
+  }
+
+  #menuToggle h1 {
+    font-size: 2em;
+    display: flex;
+    margin-top: 16px;
+    justify-content: center;
+    transform: translate(0, -30px);
+    z-index: 1;
+  }
+
+  #menu ul li {
+    border: unset;
+    font-size: 1.3em;
+    height: 20px;
+  }
+
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    position: relative;
+    margin: 1%;
+    background: var(--secondaryColour);
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transform: translate(25px, 30px);
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 15%;
+    height: 60px;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+  }
+
+  #menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between !important;
+    width: 50%;
+    height: 100vh;
+    margin: -160px 0 0 0;
+    padding-top: 120px;
+    background: var(--tertiaryColour);
+    list-style-type: none;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #navLinkContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #functions {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #menuToggle input:checked ~ #menu {
+    transform: none;
+  }
+
+  /* Changing the height of the header since it only contains the heading */
+  header {
+    height: 60px;
+  }
+
+  main {
+    margin-top: 60px;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  /* Hiding the in-page navigation */
+  .in_page_nav {
+    display: none;
+  }
+  /* =============================================== */
+
+  /* =============================================== */
+  /* Index Page */
+  /* =============================================== */
+
+  /* Changing the position of the cover image */
+  #cover-content {
+    top: 80%;
+    width: 20%;
+  }
+
+  /* =============================================== */
+
+  /* =============================================== */
+  /* Reception Page */
+  /* =============================================== */
+
+  /* Hiding the news article on smaller screen sizes */
+  #news {
+    display: none;
+  }
+
+  #reception {
+    margin-top: 30px;
+  }
+
+  /* =============================================== */
+
+  /* =============================================== */
+  /* History Page */
+  /* =============================================== */
+
+  /* Reducing amount of columns on the newspapers */
+  .newspaperArticle {
+    column-count: 2;
+  }
+  #intro {
+    margin-top: 60px;
+  }
+
+  /* =============================================== */
+
+  /* =============================================== */
+  /* Log In Page */
+  /* =============================================== */
+
+  video {
+    width: 50%;
+  }
+
+  #menuToggleLogIn h1 {
+    margin: 0;
+  }
+
+  #logInForm {
+    padding-top: 100px;
+  }
+
+  /* =============================================== */
+
+  /* =============================================== */
+  /* Shop Page */
+  /* =============================================== */
+  #item {
+    columns: 2;
+    margin-top: 150px;
+  }
+  #promo_add {
+    margin-top: 70px;
+    width: 77%;
+    padding: 2%;
+  }
+  /* =============================================== */
+}
+
+/* ========================================================== */
+/* Screens smaller than 950px */
+/* ========================================================== */
+
+@media screen and (max-width: 950px) {
+  #cover-content {
+    top: 85%;
+  }
+
+  #critics {
+    display: flex;
+    flex-direction: column;
+  }
+
+  table {
+    width: 100%;
+  }
+  td {
+    font-size: 1em;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+  h4 {
+    font-size: 1em;
+  }
+}
+
+/* ========================================================== */
+/* Screens smaller than 750px */
+/* ========================================================== */
+
+@media screen and (max-width: 750px) {
+  /* =============================================== */
+
+  /* =============================================== */
+  /* Index Page */
+  /* =============================================== */
+
+  /* Repositioning elements */
+  .indexContent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .indexContent :nth-child(1) {
+    order: 1;
+  }
+
+  #cover-content {
+    position: static;
+    height: 100%;
+    margin-top: 70px;
+  }
+
+  /* =============================================== */
+
+  /* =============================================== */
+  /* Reception Page */
+  /* =============================================== */
+  #details {
+    margin: 0;
+  }
+
+  /* =============================================== */
+
+  /* =============================================== */
+  /* History Page */
+  /* =============================================== */
+  .newspaperArticle {
+    column-count: 1;
+  }
+  #anna_anderson,
+  #anastasia,
+  #rasputin {
+    transform: rotate(0deg);
+  }
+
+  /* =============================================== */
+
+  /* =============================================== */
+  /* Log In Page */
+  /* =============================================== */
+  video {
+    display: none;
+  }
+
+  #logInForm {
+    width: 100%;
+  }
+  /* =============================================== */
+}
+
+/* ========================================================== */
+/* Screens smaller than 550px */
+/* ========================================================== */
+
+@media screen and (max-width: 550px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #item {
+    columns: 1;
+  }
+}
+
+/* ========================================================== */
+/* Screens smaller than 400px */
+/* ========================================================== */
+
+@media screen and (max-width: 400px) {
+  /* =============================================== */
+  /* Navigation */
+  /* =============================================== */
+  #menuToggle span {
+    margin: 2%;
+  }
+
+  #menuToggle h1 {
+    transform: translate(0, -45px);
+  }
+
+  #menu {
+    width: 100%;
+    margin: -125px 0 0 -40px;
+  }
+
+  #functions {
+    width: 100%;
+  }
+
+  #menuToggle div li {
+    padding: 16px;
+    box-shadow: 0px 1px 5px 0px var(--primaryColour);
+  }
+  /* =============================================== */
+
+  /* =============================================== */
+  /* Index Page */
+  /* =============================================== */
+
+  /* Reposition Cover image */
+  #cover-content {
+    margin-top: 0;
+    width: 100%;
+  }
+}
+
+/* ========================================================== */
+/* Media queries to keep the cover image in place accross     */
+/* all screen sizes                                           */
+/* ========================================================== */
+
+@media screen and (max-width: 880px) {
+  #cover-content {
+    top: 90%;
+    left: 15%;
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #cover-content {
+    top: 95%;
+    left: 12%;
+    width: 100%;
+  }
+}
+/* ========================================================== */

@@ -1,41 +1,58 @@
 <!DOCTYPE html>
 <!-- u19048263 Lucinda Botes -->
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Lucinda Botes">
-    <link rel="stylesheet" href="css/navigation.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Lucinda Botes" />
+    <link rel="icon" href="media/favicon/golden-eiffel-tower.png" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Anastasia - Log in</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav id="navigation">
-            <div id="menuToggleLogIn">
-                <h1>
-                    <a href="index.html">Anastasia</a>
-                </h1>
-        </nav>
-
+      <nav id="navigation">
+        <div id="menuToggleLogIn">
+          <h1>
+            <a href="index.html">Anastasia</a>
+          </h1>
+        </div>
+      </nav>
     </header>
-    <main>
-        <h2>Log In</h2>
-        <p>Please log in first</p>
-        <form action="checkout.html" method="POST">
-            <label>Username
-                <input type="text" name="username" id="username" required>
+    <main id="logInMain">
+      <div id="logInPage">
+        <video src="media/videos/trinket_box.mp4" autoplay loop>
+          Unfortunately this file is not supported by your browser
+        </video>
+        <div class="content" id="logInForm">
+          <h2>Log In</h2>
+          <p>Please log in first</p>
+          <form
+            class="form"
+            onSubmit="return onLogin()"
+            action="checkout.html"
+            method="POST"
+          >
+            <label class="logInLabel"
+              >Username
+              <input type="text" name="username" id="username" required />
+              <span class="errorMessage"></span>
             </label>
-            <br><br>
-            <label> Password
-                <input type="password" name="password" id="password" required>
+            <br /><br />
+            <label class="logInLabel">
+              Password
+              <input type="password" name="password" id="password" required />
+              <span class="errorMessage"></span>
             </label>
-            <br><br>
-            <input type="submit" value="Log in">
-        </form>
+            <br /><br />
+            <span class="submitMessage errorMessage"></span>
+            <input class="button" type="submit" value="Log in" />
+          </form>
+        </div>
+      </div>
     </main>
-</body>
-
+    <script src="index.js"></script>
+  </body>
 </html>

@@ -1,241 +1,356 @@
 <!DOCTYPE html>
 <!-- u19048263 Lucinda Botes -->
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Lucinda Botes">
-    <link rel="stylesheet" href="css/navigation.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Lucinda Botes" />
+    <link rel="icon" href="media/favicon/golden-eiffel-tower.png" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Anastasia - Reception</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header id="Top">
-        <nav id="navigation">
-            <div id="menuToggle">
-                <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-                <h1>
-                    <a href="index.html">Anastasia</a>
-                </h1>
-                <ul id="menu">
-                    <div id="navLinkContainer">
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="cast.html">Cast</a>
-                        </li>
-                        <li>
-                            <a href="reception.html">Reception</a>
-                        </li>
-                        <li>
-                            <a href="history.html">History</a>
-                        </li>
-                        <li>
-                            <a href="gallery.html">Gallery</a>
-                        </li>
-                        <li>
-                            <a href="shop.html">Shop</a>
-                        </li>
-                    </div>
-                    <div id="functions">
-                        <li>
-                            <a href="cart.html">My Cart</a>
-                        </li>
-                        <li>
-                            <a href="login.html">Log in</a>
-                        </li>
-                    </div>
-                </ul>
-        </nav>
+      <nav id="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <h1>
+            <a href="index.html">Anastasia</a>
+          </h1>
+          <div id="menu">
+            <ul id="navLinkContainer">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="cast.html">Cast</a>
+              </li>
+              <li class="active">
+                <a href="reception.html">Reception</a>
+              </li>
+              <li>
+                <a href="history.html">History</a>
+              </li>
+              <li>
+                <a href="gallery.html">Gallery</a>
+              </li>
+              <li>
+                <a href="shop.html">Shop</a>
+              </li>
+            </ul>
+            <ul id="functions">
+              <li>
+                <a href="login.html">Log in</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
-        <div class="in_page_nav">
-            <ol>
-                <li>
-                    <a href="#reception">Reception</a>
-                </li>
-                <li>
-                    Reviews
-                    <ul>
-                        <li>
-                            <a href="#critics">Critics Reviews</a>
-                        </li>
-                        <li>
-                            <a href="#audience">Audience Reviews</a>
-                        </li>
-                    </ul>
-                </li>
-            </ol>
-        </div>
-        <div id="reception">
-            <h2>Reception</h2>
-            <ul>
-                <li>Score: 86%</li>
-                <li>Reviews: 56</li>
-                <li>Average Rating: 7/10</li>
-                <li>Box Office On Release: $120,541.</li>
-                <li>World Wide Release: $14.1 million</li>
-                <li>Total From Theater(US): $58.4 million</li>
-                <li>Total From Theater(Internationally): $81.4 million</li>
-                <li>Total: $139.8 million</li>
-                <li>Academy Award Nominations: 18</li>
-                <li>Academy Award Wins: 3</li>
+      <div class="in_page_nav">
+        <ol id="ordered_list">
+          <li class="li">
+            <a class="list_item" href="#reception">Reception</a>
+          </li>
+          <li>
+            Reviews
+            <ul id="sub_nav">
+              <li>
+                <a href="#critics">Critics Reviews</a>
+              </li>
+              <li>
+                <a href="#audience">Audience Reviews</a>
+              </li>
             </ul>
+          </li>
+          <li class="li">
+            <a class="list_item" href="#news">Latest News</a>
+          </li>
+        </ol>
+      </div>
+      <div class="content">
+        <div id="reception">
+          <h2>Reception</h2>
+          <table>
+            <tr>
+              <td>Score</td>
+              <td>86%</td>
+            </tr>
+            <tr>
+              <td>Reviews</td>
+              <td>56</td>
+            </tr>
+            <tr>
+              <td>Average Rating</td>
+              <td>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+              </td>
+            </tr>
+            <tr>
+              <td>Box Office On Release</td>
+              <td>$120,541</td>
+            </tr>
+            <tr>
+              <td>World Wide Release</td>
+              <td>$14.1 million</td>
+            </tr>
+            <tr>
+              <td>Total From Theater(US)</td>
+              <td>$58.4 million</td>
+            </tr>
+            <tr>
+              <td>Total From Theater(Internationally)</td>
+              <td>$81.4 million</td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td>$139.8 million</td>
+            </tr>
+            <tr>
+              <td>Academy Award Nominations</td>
+              <td>18</td>
+            </tr>
+            <tr>
+              <td>Academy Award Wins</td>
+              <td>3</td>
+            </tr>
+          </table>
         </div>
         <div id="reviews">
-            <h2>Reviews</h2>
-            <div id="critics">
-                <h3>By Critics</h3>
-                <div class="reviews">
-                    <h4>Mike Clark</h4>
-                    USA Today <br>
-                    <q>The film's strength lies not just with its haunting melodies,
-                        pretty pictures and kid-friendly sidekicks, but in an emotionally gripping script.</q> <br>
-                    January 9, 2018<br>
-                    <strong>Rating: 4/5</strong>
-                </div>
-                <div class="reviews">
-                    <h4>Todd McCarthy</h4>
-                    Variety <br>
-                    <q>An ambitious, serious but not particularly stimulating musical
-                        feature that unconvincingly attempts to graft warm and cuddly
-                        family-film motifs onto turbulent aspects of modern history and mythology.</q> <br>
-                    September 1, 2008<br>
-                    <strong>Rating: 3/5</strong>
-                </div>
-                <div class="reviews">
-                    <h4>Hannah Ryan</h4>
-                    Screen Queens <br>
-                    <q>It is a film that leaves us with an optimistic, albeit somewhat corny,
-                        message; love is the most important thing there is, be it familial, romantic or platonic...</q>
-                    <br>
-                    August 24, 2018<br>
-                    <strong>Rating: 4/5</strong>
-                </div>
+          <h2>Reviews</h2>
+          <h3>By Critics</h3>
+          <div id="critics">
+            <div class="reviews">
+              <h4>Mike Clark</h4>
+              USA Today <br />
+              <q
+                >The film's strength lies not just with its haunting melodies,
+                pretty pictures and kid-friendly sidekicks, but in an
+                emotionally gripping script.</q
+              >
+              <br />
+              January 9, 2018<br />
+              <strong>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+              </strong>
             </div>
-            <div id="audience">
-                <h3>By Audiences</h3>
-                <div class="reviews">
-                    <h4>Matthew Samuel M</h4>
-                    Viewer <br>
-                    <q>Though the pacing may be off at times--and some moments may feel like
-                        Disney-rip-offs--Anastasia is a very well-done animated film,
-                        and may arguably be the most stunning film of its genre to grace the silver screen.
-                        It also contains one of the most beautiful songs ever written for
-                        film: "Journey to the Past," and manages to brilliantly blur the line
-                        between animation and real-life. With mostly strong dialogue, thrilling sequences,
-                        and a powerful, moving story, Anastasia is a triumph.</q> <br>
-                    August 6, 2013<br>
-                    <strong>Rating: 4.5/5</strong>
-                </div>
-                <div class="reviews">
-                    <h4>Dann M</h4>
-                    Viewer <br>
-                    <q>From Don Bluth comes the enchanting animated film Anastasia. When the Grand
-                        Duchess offers a reward for her lost niece, Anastasia, a pair of charlatans
-                        in St. Petersburg attempt to cash in by getting a naive young girl to play
-                        the part, but they soon start to suspect that she could really be the lost
-                        princess. The cast is exceptional, and includes John Cusack, Meg Ryan,
-                        Christopher Lloyd, and Kelsey Grammer. The music is also excellent,
-                        with a number of charismatic and lyrical songs. However, the film tries
-                        to include some supernatural elements that don't quite work. A beautiful
-                        and vibrant film, Anastasia is delightfully entertaining.</q> <br>
-                    March 13, 2013<br>
-                    <strong>Rating: 3.5/5</strong>
-                </div>
-                <div class="reviews">
-                    <h4>Bradley J</h4>
-                    Viewer <br>
-                    <q>I don't know exactly why it has taken me so long to view Anastasia.
-                        When I was a kid, these were the types of movies I lived on and Anastasia
-                        had I watched younger, would have most likely been one of those few
-                        I watched over and over. Now as a twenty-year old I was still enraptured
-                        in this film and its epic scope and dazzling music. It follows Disney's
-                        formula, while besting them occasionally at it, and tells an important
-                        and rather dark story built upon true events that are even darker.
-                        Anastasia as a character is a brilliant depiction of a strong,
-                        independent woman who is feminine but also fiery and harder-edged
-                        than typical princessess' from Disney during this time. The music
-                        is what ultimately sells this film. It is a full fledged musical with
-                        Broadway style dance numbers and hard hitting ballads. Stephen Flaherty
-                        composes some wonderful songs that lift the film when it starts to lag
-                        and his work in Broadway musicals such as Ragtime is evident in the films
-                        showstopping numbers. Minor flaws include a villain who seems disconnected
-                        from the main storyline at times and a slight pacing lag near the end.
-                        However, Anastasia is a film that gives Disney a run for its money.</q> <br>
-                    January 21, 2017<br>
-                    <strong>Rating: 4/5</strong>
-                </div>
+            <div class="reviews">
+              <h4>Todd McCarthy</h4>
+              Variety <br />
+              <q
+                >An ambitious, serious but not particularly stimulating musical
+                feature that unconvincingly attempts to graft warm and cuddly
+                family-film motifs onto turbulent aspects of modern history and
+                mythology.</q
+              >
+              <br />
+              September 1, 2008<br />
+              <strong>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+              </strong>
             </div>
+            <div class="reviews">
+              <h4>Hannah Ryan</h4>
+              Screen Queens <br />
+              <q
+                >It is a film that leaves us with an optimistic, albeit somewhat
+                corny, message; love is the most important thing there is, be it
+                familial, romantic or platonic...</q
+              >
+              <br />
+              August 24, 2018<br />
+              <strong>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+              </strong>
+            </div>
+          </div>
+          <h3>By Audiences</h3>
+          <div id="audience">
+            <div class="reviews">
+              <h4>Matthew Samuel M</h4>
+              Viewer <br />
+              <q
+                >Though the pacing may be off at times--and some moments may
+                feel like Disney-rip-offs--Anastasia is a very well-done
+                animated film, and may arguably be the most stunning film of its
+                genre to grace the silver screen. It also contains one of the
+                most beautiful songs ever written for film: "Journey to the
+                Past," and manages to brilliantly blur the line between
+                animation and real-life. With mostly strong dialogue, thrilling
+                sequences, and a powerful, moving story, Anastasia is a
+                triumph.</q
+              >
+              <br />
+              August 6, 2013<br />
+              <strong>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </strong>
+            </div>
+            <div class="reviews">
+              <h4>Dann M</h4>
+              Viewer <br />
+              <q
+                >From Don Bluth comes the enchanting animated film Anastasia.
+                When the Grand Duchess offers a reward for her lost niece,
+                Anastasia, a pair of charlatans in St. Petersburg attempt to
+                cash in by getting a naive young girl to play the part, but they
+                soon start to suspect that she could really be the lost
+                princess. The cast is exceptional, and includes John Cusack, Meg
+                Ryan, Christopher Lloyd, and Kelsey Grammer. The music is also
+                excellent, with a number of charismatic and lyrical songs.
+                However, the film tries to include some supernatural elements
+                that don't quite work. A beautiful and vibrant film, Anastasia
+                is delightfully entertaining.</q
+              >
+              <br />
+              March 13, 2013<br />
+              <strong>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+              </strong>
+            </div>
+            <div class="reviews">
+              <h4>Bradley J</h4>
+              Viewer <br />
+              <q
+                >I don't know exactly why it has taken me so long to view
+                Anastasia. When I was a kid, these were the types of movies I
+                lived on and Anastasia had I watched younger, would have most
+                likely been one of those few I watched over and over. Now as a
+                twenty-year old I was still enraptured in this film and its epic
+                scope and dazzling music. It follows Disney's formula, while
+                besting them occasionally at it, and tells an important and
+                rather dark story built upon true events that are even darker.
+                Anastasia as a character is a brilliant depiction of a strong,
+                independent woman who is feminine but also fiery and
+                harder-edged than typical princessess' from Disney during this
+                time. The music is what ultimately sells this film. It is a full
+                fledged musical with Broadway style dance numbers and hard
+                hitting ballads. Stephen Flaherty composes some wonderful songs
+                that lift the film when it starts to lag and his work in
+                Broadway musicals such as Ragtime is evident in the films
+                showstopping numbers. Minor flaws include a villain who seems
+                disconnected from the main storyline at times and a slight
+                pacing lag near the end. However, Anastasia is a film that gives
+                Disney a run for its money.</q
+              >
+              <br />
+              January 21, 2017<br />
+              <strong>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+              </strong>
+            </div>
+          </div>
+          <a
+            class="button"
+            href="https://www.rottentomatoes.com/m/1079818-anastasia"
+            >See more</a
+          >
         </div>
         <div id="news">
-            <h2>Latest News</h2>
-            <h3>Anastasia Is Now a Disney Princess</h3>
-            <h4>Princess Weekes</h4>
-            <p>Dec 7th, 2020, 12:38 pm <br>
-                Let’s journey into the past. <br>
-                I saw Fox’s Anastasia in theaters as a child, and it was traumatic
-                (that Rasputin scene) but also introduced me to the kink of liking
-                boys who are kind of mean, via Dimitri. I had the VHS, which I abused,
-                especially to listen to the end cover song of “Journey to the Past” by
-                R’n’B artist Aaliyah. Anastasia also, therefore, was my entry point to
-                the Russian Revolution and the Romanovs. <br>
-                Which meant I learned, as Angela Lansbury explains in the opening,
-                a jealous Rasputin infused with <q>demonic magic</q> turned the people
-                of Russia against the royal family for casting him out. During
-                the assault on the palace, Anastasia is saved by a young member of
-                the proletariat class, kitchen boy Dimitri. She loses her memory and
-                is raised in an orphanage as Anya, unaware that she is the Grand Duchess
-                Anastasia, with a loving grand-mama in Paris voiced by Angela Lansbury.
-                Thankfully, she has a McGuffin necklace and some vague memories that make
-                her the perfect fit for adult Dimitri and his cohort Vlad to pass off as
-                the real Anastasia. <br>
-                So, imagine my shock when I picked up The Royal Diaries: Anastasia:
-                The Last Grand Duchess, Russia, 1914 and found out that the Anastasia
-                I knew and loved was based on a real person, and there was no magic
-                involved, just politics and an economic revolution. Even that book did
-                a lot of work to demonize Rasputin, since he was an unpopular figure,
-                but not hated among the royals themselves. <br>
-                Only later, after reading The Romanov Sisters: The Lost Lives of the
-                Daughters of Nicholas and Alexandra, by Helen Rappaport, did I get a
-                better understanding of the Romanovs and why this cult of personality
-                emerged around Anastasia specifically. <br>
-                Since their deaths, there have been several Romanov impostors because,
-                due to the circumstances of their assassination and the chaotic organization
-                surrounding it, communist misinformation, and a lack of DNA testing, there
-                was a fairytale-like desire to see that one of the young Romanov kids had
-                survived—the most famous of them being Anna Anderson. <br>
-                Anderson (real name Franziska Schanzkowska) came on the scene in the 1920s,
-                and while most members of the royal family didn’t think she was the real
-                deal, some did. <br>
-                Eventually, Ernest Louis, Grand Duke of Hesse, Anastasia’s maternal uncle,
-                hired a private investigator to figure out the truth and identified her as
-                Schanzkowska. Still, because Anderson has become so popular, the story lingered
-                and was eventually the inspiration for the 1956 film Anastasia, starring
-                Ingrid Bergman. That film would then turn into the plot premise for the
-                ’90s animated classic that defined my childhood understanding of Anatasia. <br>
-                Now the film has a home on Disney+, the same company that, when the film was
-                originally released, decided to rerelease The Little Mermaid in theaters,
-                just to mess with it. Well, talk about having your cake and eating it too. <br>
-                Well, now when I rewatch Anastasia, I’m both amused by all the references
-                to communism and actual historical detail, and also that a film could be
-                so wildly inaccurate that it made the slaughter of an entire family into
-                the premise for a <q>family</q> musical film. <br>
-                That’s the power of cinema.
-            </p>
+          <h2>Latest News</h2>
+          <h3>Anastasia Is Now a Disney Princess</h3>
+          <h4>Princess Weekes</h4>
+          <p>
+            Dec 7th, 2020, 12:38 pm <br />
+            Let’s journey into the past. <br />
+            I saw Fox’s Anastasia in theaters as a child, and it was traumatic
+            (that Rasputin scene) but also introduced me to the kink of liking
+            boys who are kind of mean, via Dimitri. I had the VHS, which I
+            abused, especially to listen to the end cover song of “Journey to
+            the Past” by R’n’B artist Aaliyah. Anastasia also, therefore, was my
+            entry point to the Russian Revolution and the Romanovs. <br />
+            Which meant I learned, as Angela Lansbury explains in the opening, a
+            jealous Rasputin infused with <q>demonic magic</q> turned the people
+            of Russia against the royal family for casting him out. During the
+            assault on the palace, Anastasia is saved by a young member of the
+            proletariat class, kitchen boy Dimitri. She loses her memory and is
+            raised in an orphanage as Anya, unaware that she is the Grand
+            Duchess Anastasia, with a loving grand-mama in Paris voiced by
+            Angela Lansbury. Thankfully, she has a McGuffin necklace and some
+            vague memories that make her the perfect fit for adult Dimitri and
+            his cohort Vlad to pass off as the real Anastasia. <br />
+            So, imagine my shock when I picked up The Royal Diaries: Anastasia:
+            The Last Grand Duchess, Russia, 1914 and found out that the
+            Anastasia I knew and loved was based on a real person, and there was
+            no magic involved, just politics and an economic revolution. Even
+            that book did a lot of work to demonize Rasputin, since he was an
+            unpopular figure, but not hated among the royals themselves. <br />
+            Only later, after reading The Romanov Sisters: The Lost Lives of the
+            Daughters of Nicholas and Alexandra, by Helen Rappaport, did I get a
+            better understanding of the Romanovs and why this cult of
+            personality emerged around Anastasia specifically. <br />
+            Since their deaths, there have been several Romanov impostors
+            because, due to the circumstances of their assassination and the
+            chaotic organization surrounding it, communist misinformation, and a
+            lack of DNA testing, there was a fairytale-like desire to see that
+            one of the young Romanov kids had survived—the most famous of them
+            being Anna Anderson. <br />
+            Anderson (real name Franziska Schanzkowska) came on the scene in the
+            1920s, and while most members of the royal family didn’t think she
+            was the real deal, some did. <br />
+            Eventually, Ernest Louis, Grand Duke of Hesse, Anastasia’s maternal
+            uncle, hired a private investigator to figure out the truth and
+            identified her as Schanzkowska. Still, because Anderson has become
+            so popular, the story lingered and was eventually the inspiration
+            for the 1956 film Anastasia, starring Ingrid Bergman. That film
+            would then turn into the plot premise for the ’90s animated classic
+            that defined my childhood understanding of Anatasia. <br />
+            Now the film has a home on Disney+, the same company that, when the
+            film was originally released, decided to rerelease The Little
+            Mermaid in theaters, just to mess with it. Well, talk about having
+            your cake and eating it too. <br />
+            Well, now when I rewatch Anastasia, I’m both amused by all the
+            references to communism and actual historical detail, and also that
+            a film could be so wildly inaccurate that it made the slaughter of
+            an entire family into the premise for a <q>family</q> musical film.
+            <br />
+            That’s the power of cinema.
+          </p>
         </div>
-        <a href="#Top">Back to Top</a>
+      </div>
     </main>
     <footer>
-        <a href="https://www.rottentomatoes.com/m/1079818-anastasia">Learn more at...</a>
-        <p>&copy; Lucinda Botes u19048263</p>
+      <p>&copy; Lucinda Botes u19048263</p>
     </footer>
-</body>
-
+    <script src="https://use.fontawesome.com/f35e805ccb.js"></script>
+  </body>
 </html>

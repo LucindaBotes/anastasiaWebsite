@@ -1,160 +1,284 @@
 <!DOCTYPE html>
 <!-- u19048263 Lucinda Botes -->
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Lucinda Botes">
-    <link rel="stylesheet" href="css/navigation.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Lucinda Botes" />
+    <link rel="icon" href="media/favicon/golden-eiffel-tower.png" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Anastasia - Checkout</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav id="navigation">
-            <div id="menuToggle">
-                <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-                <h1>
-                    <a href="index.html">Anastasia</a>
-                </h1>
-                <ul id="menu">
-                    <div id="navLinkContainer">
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="cast.html">Cast</a>
-                        </li>
-                        <li>
-                            <a href="reception.html">Reception</a>
-                        </li>
-                        <li>
-                            <a href="history.html">History</a>
-                        </li>
-                        <li>
-                            <a href="gallery.html">Gallery</a>
-                        </li>
-                        <li>
-                            <a href="shop.html">Shop</a>
-                        </li>
-                    </div>
-                    <div id="functions">
-                        <li>
-                            <a href="cart.html">My Cart</a>
-                        </li>
-                        <li>
-                            <a href="login.html">Log in</a>
-                        </li>
-                    </div>
-                </ul>
-        </nav>
+      <nav id="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <h1>
+            <a href="index.html">Anastasia</a>
+          </h1>
+          <div id="menu">
+            <ul id="navLinkContainer">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="cast.html">Cast</a>
+              </li>
+              <li>
+                <a href="reception.html">Reception</a>
+              </li>
+              <li>
+                <a href="history.html">History</a>
+              </li>
+              <li>
+                <a href="gallery.html">Gallery</a>
+              </li>
+              <li>
+                <a href="shop.html">Shop</a>
+              </li>
+            </ul>
+            <ul id="functions">
+              <li>
+                <a href="login.html">Log in</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
-    <main>
-        <h2>Checkout</h2>
-        <p>Please input the following information to proceed with your purchase <br>
-            Note that fields marked with * are required</p>
-        <form action="results.html" method="post">
-            <fieldset>
-                <p>Contact details*
-                    <br>
-                    <label>Name
-                        <input type="text" name="name" id="name" required>
-                    </label>
-                    <br>
-                    <label>Number
-                        <input type="tel" name="number" id="number" required>
-                    </label>
-                    <br>
-                    <label>Email Address
-                        <input type="email" name="email" id="email" required>
-                    </label>
-                </p>
-                <br>
-                <label>Location*
-                    <input type="text" name="address" id="address" required>
+    <main id="checkoutPageMain">
+      <div class="content">
+        <h2 id="checkputHeading">Checkout</h2>
+        <p>
+          Please input the following information to proceed with your purchase
+          <br />
+          Note that fields marked with * are required
+        </p>
+        <form id="checkoutForm" action="results.html" method="post">
+          <fieldset>
+            <div id="personal">
+              <div class="inline">
+                <label class="checkoutLabels">
+                  Name*
+                  <input
+                    class="textInput"
+                    type="text"
+                    name="name"
+                    id="fullName"
+                    required
+                    placeholder="Full Name"
+                  />
+                  <span class="errorMessage"></span>
                 </label>
-                <br>
-                <label>Or Choose on Map
-                    <div id="googleMap" style="width:10%;height:50px;"></div>
+                <br />
+                <label class="checkoutLabels"
+                  >Cellphone Number*
+                  <input
+                    class="textInput"
+                    type="tel"
+                    name="number"
+                    id="number"
+                    required
+                    placeholder="0123456789"
+                  />
+                  <span class="errorMessage"></span>
                 </label>
-            </fieldset>
-            <fieldset>
-                <label>Promo Code
-                    <input type="tel" name="promo" id="promo" maxlength="5" pattern="54321">
+              </div>
+              <label class="checkoutLabels"
+                >Email*
+                <input
+                  class="textInput"
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  placeholder="example@gmail.com"
+                />
+                <span class="errorMessage"></span>
+              </label>
+              <br />
+              <label class="checkoutLabels"
+                >Location
+                <input
+                  class="textInput"
+                  type="text"
+                  name="address"
+                  id="address"
+                  placeholder="Delivery Address"
+                />
+              </label>
+              <div id="locationOnMap">
+                <label class="checkoutLabels"
+                  >Or Choose on Map
+                  <iframe
+                    id="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.487266857504!2d28.23039906550108!3d-25.75446433364005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9561bd0e76df93%3A0x9b8b45b98981dd83!2sUniversity%20of%20Pretoria%20-%20Hatfield%20Campus%20Main%20Entrance!5e0!3m2!1sen!2sza!4v1624261067781!5m2!1sen!2sza"
+                    allowfullscreen=""
+                    loading="lazy"
+                  ></iframe>
                 </label>
-            </fieldset>
-            <fieldset>
-                <p>Payment method*</p>
-                <label>
-                    <input type="radio" name="payment" id="visa">
-                    Card
-                </label>
-                <label>
-                    <input type="radio" name="payment" id="EFT">
-                    EFT
-                </label>
-                <label>
-                    <input type="radio" name="payment" id="paypal">
-                    Paypal
-                </label>
-            </fieldset>
-            <fieldset>
-                <p>Card</p>
-                <label>Card Name
-                    <input type="text" name="card_name" id="card_name">
-                </label>
-                <br>
-                <label>Card Number
-                    <input type="tel" name="card_number" id="card_number">
-                </label>
-                <br>
-                <label>Card Expiry Date
-                    <input type="date" name="card_date" id="card_date">
-                </label>
-                <br>
-                <label>CVV
-                    <input type="tel" name="cvv" id="cvv" maxlength="3">
-                </label>
-            </fieldset>
-            <fieldset>
-                <p>
-                    EFT <br>
-                    Account Details: <br>
-                    Account Number: 01234567891011 <br>
-                    Bank: ABCDEF <br>
-                    Branch Code: 012345 <br>
-                </p>
-                <label> Proof of payment
-                    <input type="file" name="proof" id="proof">
-                </label>
-            </fieldset>
-            <fieldset>
-                <p>Paypal</p>
-                <input type="button" value="To Paypal">
-            </fieldset>
-            <fieldset>
-                <h4>Totals</h4>
-                <p>
-                    Subtotal: <del>R400.00</del> R0.00 <br>
-                    Delivery Fee: R0 <br>
-                    Total: R0
-                </p>
-            </fieldset>
-            <fieldset>
-                <!-- Due to only being allowed to have html, I cannot possibly have the post method work. If there is a way to succesfully post with only html, please teach us.-->
-                <input type="submit" value="Purchase">
-                <input type="reset" value="Reset">
-            </fieldset>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <label class="checkoutLabels"
+              >Promo Code
+              <input
+                id="promo"
+                type="tel"
+                name="promo"
+                maxlength="5"
+                pattern="54321"
+              />
+              <span class="errorMessage"></span>
+            </label>
+          </fieldset>
+          <fieldset id="payment">
+            <p>Payment method*</p>
+            <label class="radioInput">
+              <input
+                type="radio"
+                name="payment"
+                id="visa"
+                onchange="togglePayment('cardPayment')"
+                required
+              />
+              <span>Card</span>
+            </label>
+            <label class="radioInput">
+              <input
+                type="radio"
+                name="payment"
+                id="EFT"
+                onchange="togglePayment('EFTPayment')"
+              />
+              <span>EFT</span>
+            </label>
+            <label class="radioInput">
+              <input
+                type="radio"
+                name="payment"
+                id="paypal"
+                onchange="togglePayment('payPalPayment')"
+              />
+              <span>Paypal</span>
+            </label>
+            <span class="errorMessage"></span>
+          </fieldset>
+          <fieldset id="cardPayment" class="hide">
+            <p>Card</p>
+            <label
+              >Card Name
+              <input
+                class="textInput"
+                type="text"
+                name="card_name"
+                id="card_name"
+                placeholder="Name on Card"
+              />
+              <span class="errorMessage"></span>
+            </label>
+            <br />
+            <label
+              >Card Number
+              <input
+                class="textInput"
+                type="tel"
+                name="card_number"
+                id="card_number"
+                placeholder="Number on Card"
+              />
+              <span class="errorMessage"></span>
+            </label>
+            <div class="inline">
+              <label class="checkoutLabels"
+                >Card Expiry Date
+                <input
+                  class="textInput"
+                  type="date"
+                  name="card_date"
+                  id="card_date"
+                />
+                <span class="errorMessage"></span>
+              </label>
+              <label class="checkoutLabels"
+                >CVV
+                <input
+                  class="textInput"
+                  type="tel"
+                  name="cvv"
+                  id="cvv"
+                  maxlength="3"
+                  placeholder="XXX"
+                />
+                <span class="errorMessage"></span>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset id="EFTPayment" class="hide">
+            <p>
+              EFT <br />
+              Account Details: <br />
+              Account Number: 01234567891011 <br />
+              Bank: ABCDEF <br />
+              Branch Code: 012345 <br />
+            </p>
+          </fieldset>
+          <fieldset id="payPalPayment" class="hide">
+            <a
+              href="https://www.paypal.com/za/webapps/mpp/home?kid=p55762084372&gclsrc=ds"
+            >
+              <img
+                src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-200px.png"
+                alt="PayPal logo"
+              />
+            </a>
+          </fieldset>
+          <fieldset id="totals">
+            <h4>Totals</h4>
+            <div id="prices">
+              <div class="priceText">
+                <p>Subtotal:</p>
+                <p>R400.00</p>
+              </div>
+              <div class="priceText">
+                <p>Discounts:</p>
+                <p>-R400.00</p>
+              </div>
+              <div class="priceText">
+                <p>Delivery Fee:</p>
+                <p>R0</p>
+              </div>
+              <div class="priceText">
+                <p>Total:</p>
+                <p>R0</p>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="priceText">
+            <div>
+              <input
+                class="button"
+                type="submit"
+                id="purchase"
+                value="Purchase"
+              />
+              <span class="submitMessage"></span>
+            </div>
+            <input type="reset" value="Reset" />
+          </fieldset>
         </form>
+      </div>
     </main>
     <footer>
-        <p>&copy; Lucinda Botes u19048263</p>
+      <p>&copy; Lucinda Botes u19048263</p>
     </footer>
-</body>
-
+    <script src="index.js"></script>
+  </body>
 </html>
